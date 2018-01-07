@@ -1,0 +1,13 @@
+add_action( 'init', 'my_theme_custom_post' );
+function my_theme_custom_post() {
+    register_post_type( 'cpt',
+        array(
+            'labels' => array(
+                'name' => __( 'CPTs' ),
+                'singular_name' => __( 'CPT' )
+            ),
+            'supports' => array('title', 'editor', 'custom-fields', 'thumbnail', 'page-attributes'),
+            'public' => true
+        )
+    );
+}
