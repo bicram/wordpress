@@ -10,7 +10,7 @@ if(! defined('ABSPATH')){
 
 //Define
 define('CODEFACTORY_ACC_URL', WP_PLUGIN_URL .'/'. plugin_basename(dirname(__FILE__)) .'/');
-define('CODEFACTORY_ACC_URL', plugin_dir_path(__FILE__) );
+define('CODEFACTORY_ACC_PATH', plugin_dir_path(__FILE__) );
 
 
 
@@ -20,17 +20,17 @@ define('CODEFACTORY_ACC_URL', plugin_dir_path(__FILE__) );
 //Print shortcode in widgets
 add_filter('widget_text', 'do_shortcode');
 
-//Lodeing vc addons
-require_once(CODEFACTORY_ACC_URL. 'vc-addons/vc-blocks-load.php');
+//Lodeing kc addons
+require_once(CODEFACTORY_ACC_PATH. 'kc-addons/kc-blocks-load.php');
 
 
 //Theme shortcode
-require_once(CODEFACTORY_ACC_URL. 'theme-shortcodes/slide-shortcode.php');
+require_once(CODEFACTORY_ACC_PATH. 'theme-shortcodes/slide-shortcode.php');
 
 //Shortcode depends on visual composer
 include_once(ABSPATH. 'wp-admin/includes/plugin.php');
 if(is_plugin_active('js_composer/js_composer.php')){
-	//require_once(CODEFACTORY_ACC_URL. 'theme-shortcodes/staff-shortcode.php');
+	//require_once(CODEFACTORY_ACC_PATH. 'theme-shortcodes/staff-shortcode.php');
 }
 
 //Registering codefactory toolkit files
