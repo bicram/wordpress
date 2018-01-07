@@ -1,0 +1,48 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { die; }
+
+function codefactory_metabox_options($options){
+       $options      = array(); // remove old options
+
+
+       // Page Metabox Options                    -
+// -----------------------------------------
+$options[]    = array(
+  'id'        => 'codefactory_page_options',
+  'title'     => 'Page Options',
+  'post_type' => 'page',
+  'context'   => 'normal',
+  'priority'  => 'high',
+  'sections'  => array(
+
+    // begin: a section
+    array(
+      'name'  => 'codefactory_page_title_meta',
+
+      // begin: fields
+      'fields' => array(   
+
+        // begin: title field
+                array(
+                      'id'              => 'enable_title',
+                      'type'            => 'switcher',
+                      'title'           => 'Enable title?',
+                      'default'         => true,
+                      'desc'            => esc_html__('If you want page title then select on, else select off.', 'codefactory-codebank'),
+                          ),
+                array(
+                      'id'              => 'custom_title',
+                      'type'            => 'text',
+                      'title'           => 'Custom title',
+                      'dependency'      => array( 'enable_title', '==', 'true' ),
+                      'desc'            => esc_html__('If you want custom page title then input your title here', 'codefactory-codebank'),
+                          ),
+                    ),
+        // end: title field
+      ), // end: fields
+    ), // end: a section
+);
+
+return $options;
+    }
+add_filter( 'cs_metabox_options', 'codefactory_metabox_options' );
+?>       
