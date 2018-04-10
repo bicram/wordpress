@@ -14,7 +14,7 @@ $options[]    = array(
 	      'fields' => array(
 
 // begin: Slide Button field
-		array(
+			array(
 			  'id'              => 'buttons',
 			  'type'            => 'group',
 			  'title'           => esc_html__('Slide Buttons'),
