@@ -169,11 +169,11 @@ $options[]    = array(
                     'dependency'   => array( 'enable_overley', '==', 'true' ),     
                   ),
 
-        		// end: slide overley  field  
+	// end: slide overley  field  
 
 
-			      	), // end: fields
-			    ), // end: a section
+		), // end: fields
+	    ), // end: a section
 
-			),
-		);
+	),
+);
