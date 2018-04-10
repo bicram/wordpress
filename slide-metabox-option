@@ -1,10 +1,4 @@
-<?php if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access pages directly.
-
-//Page title Options	
-	function gigabyte_metabox_options( $options ) {
-	  $options      = array(); // remove old options
-
-	  $options[]    = array(
+	  	$options[]    = array(
 		  'id'        => 'gigabyte_slide_options',
 		  'title' 	  => esc_html__('Slide Options', 'gigabyte-shuvombm'),
 		  'post_type' => 'slide',
@@ -78,9 +72,9 @@
                         'type'  => 'select',
                         'default'  => 2,  
                         'options'        => array(
-									    '1'          => 'Upload Image',
-									    '2'          => 'Image URL',
-									  ),  
+						    '1'          => 'Upload Image',
+						    '2'          => 'Image URL',
+						  ),  
                         ),
 
 
@@ -118,9 +112,9 @@
                         'type'  => 'select',
                         'default'  => 2,  
                         'options'        => array(
-									    '1'          => 'Upload Image',
-									    '2'          => 'Image URL',
-									  ),  
+						    '1'          => 'Upload Image',
+						    '2'          => 'Image URL',
+						  ),  
                         ),
 
                       	array(
@@ -182,11 +176,3 @@
 
 			),
 		);
-
-
-	  return $options;
-
-}
-add_filter( 'cs_metabox_options', 'gigabyte_metabox_options' );
-
-?>
