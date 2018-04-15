@@ -1,3 +1,8 @@
+<?php
+if(! defined('ABSPATH')){
+	exit;
+}
+
 function post_list_shortcode($atts){
     extract( shortcode_atts( array(
         'count' => '',
