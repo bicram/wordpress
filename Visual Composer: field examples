@@ -1,5 +1,6 @@
 textarea_html
-Text area with default WordPress WYSIWYG Editor. Important: only one html textarea is permitted per shortcode and it should have “content” as a param_name
+Text area with default WordPress WYSIWYG Editor. Important: only one html textarea is permitted per shortcode 
+and it should have “content” as a param_name
 
 array(
   "type" => "textarea_html",
@@ -37,7 +38,8 @@ array(
 *******************************************************************************************************************************
 
 dropdown
-Dropdown input field with set of available options. Array containing the drop down values (either should be a normal array, or an associative array)
+Dropdown input field with set of available options. Array containing the drop down values 
+(either should be a normal array, or an associative array)
 
 array(
   'type' => 'dropdown',
@@ -212,7 +214,8 @@ array(
 
 
 css
-Basic CSS style editor for your content element. Check “Add “Design Options” Tab with CSS Editor to Your Element” page for more details
+Basic CSS style editor for your content element. Check “Add “Design Options” Tab with CSS Editor 
+to Your Element” page for more details
 
 array(
   "type" => "css",
