@@ -3,7 +3,7 @@ if(! defined('ABSPATH')){
 	exit;
 }
 
-function post_list_shortcode($atts){
+function post_list_shortcode($atts, $content = null){
     extract( shortcode_atts( array(
         'count' => '',
     ), $atts) );
