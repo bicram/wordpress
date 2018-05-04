@@ -5,14 +5,14 @@ if(! defined('ABSPATH')){
 
 vc_map( 
        array(
-              "name"        => __( "Hero Area", "frozen-shuvombm" ),
-              "base"        => "hero_area",
-              "category"    => __( "frozen", "frozen-shuvombm"),
+              "name"        => esc_html__( "Addon Name", "textdomain" ),
+              "base"        => "shortcode_name",
+              "category"    => esc_html__( "Category", "textdomain"),
               "params"      => array(
                       
                      array(
                         "type"          => "textfield",
-                        "heading"       => __( "Title", "frozen-shuvombm" ),
+                        "heading"       => esc_html__( "Title", "textdomain" ),
                         "param_name"    => "title",
                     ), 
                 )         
@@ -135,6 +135,10 @@ array(
   "param_name" => "field_name",
   "value" => '', 
   "description" => __( "Enter description.", "my-text-domain" )
+  "dependency" => array(
+	"element" => "btn_link_type",
+	"value" => "1"
+    )
 )
 
 
