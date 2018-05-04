@@ -1,3 +1,33 @@
+<?php
+if(! defined('ABSPATH')){
+	exit;
+}
+
+vc_map( 
+       array(
+              "name"        => __( "Hero Area", "frozen-shuvombm" ),
+              "base"        => "hero_area",
+              "category"    => __( "frozen", "frozen-shuvombm"),
+              "params"      => array(
+                      
+                     array(
+                        "type"          => "textfield",
+                        "heading"       => __( "Title", "frozen-shuvombm" ),
+                        "param_name"    => "title",
+                    ), 
+                     
+                  
+                )         
+            ) 
+        );
+
+
+
+
+********************************************************************************************************************************
+
+
+
 textarea_html
 Text area with default WordPress WYSIWYG Editor. Important: only one html textarea is permitted per shortcode 
 and it should have “content” as a param_name
