@@ -69,17 +69,16 @@ dropdown
 Dropdown input field with set of available options. Array containing the drop down values 
 (either should be a normal array, or an associative array)
 
-array(
-  'type' => 'dropdown',
-  'heading' => __( 'Field Label',  "my-text-domain" ),
-  'param_name' => 'field_name',
-  'value' => array(
-    __( 'Option 1 Label',  "my-text-domain"  ) => 'option1value',
-    __( 'Option 2 Label',  "my-text-domain"  ) => 'option2value',
-    __( 'Option 3 Label',  "my-text-domain"  ) => 'option3value',
-  ),
-  "description" => __( "Enter description.", "my-text-domain" )
-)
+ array(
+    "type" => "dropdown",
+    "heading" => __("Button Link Type", "frozen-shuvombm"),
+    "value"      => array(
+      esc_html__( "Wordpress Page", "my-text-domain" )    => "1",
+      esc_html__( "External Link", "my-text-domain" )    => "2",
+     ),
+     "std" => "1",
+     "param_name" => "btn_link_type",
+),
 
 
 *******************************************************************************************************************************
