@@ -1,4 +1,7 @@
 <?php
+if(! defined('ABSPATH')){
+	exit;
+}
 
    vc_map( 
        array(
@@ -38,19 +41,12 @@
                                                 "value" => array("-1","2","3","4","5","6","7","8","9","10","11","12","13","14","15",),
                                             ),
                         "description"   => __( "Select yes for enable loop or select No for disable", "gigabyte-shuvombm" )
-                    ),   
-                     array(
-                        "type"          => "textfield",
-                        "heading"       => __( "Slide height", "gigabyte-shuvombm" ),
-                        "param_name"    => "height",
-                        "std"           => __( "480", "gigabyte-shuvombm" ),
-                        "description"   => __( "Type side height in pixel, number only", "gigabyte-shuvombm" )
                     ), 
                      array(
                         "type"          => "dropdown",
                         "heading"       => __( "Enable autoplay?", "gigabyte-shuvombm" ),
                         "param_name"    => "autoplay",
-                        "std"           => __( "false", "gigabyte-shuvombm" ),
+                        "std"           => __( "true", "gigabyte-shuvombm" ),
                          "value"        => array(
                                             'Yes' => 'true',
                                             'No' => 'false',
@@ -109,7 +105,7 @@
                         "type"          => "dropdown",
                         "heading"       => __( "Enable dots?", "gigabyte-shuvombm" ),
                         "param_name"    => "dots",
-                        "std"           => __( "false", "gigabyte-shuvombm" ),
+                        "std"           => __( "true", "gigabyte-shuvombm" ),
                          "value"        => array(
                                             'Yes' => 'true',
                                             'No' => 'false',
