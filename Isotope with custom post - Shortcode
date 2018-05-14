@@ -21,7 +21,7 @@ function project_filter_shortcode($atts){
             jQuery(".project-filter-menu li").removeClass("active");
             jQuery(this).addClass("active");
             
-            var selector = $(this).attr("data-filter");
+            var selector = jQuery(this).attr("data-filter");
             jQuery(".project-filter-'.$project_daynamic_id.'").isotope({
                 filter: selector
             });
