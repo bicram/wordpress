@@ -14,23 +14,23 @@ function project_filter_shortcode($atts){
     $project_daynamic_id = rand(78434, 8989668);         
     $markup = '
     <script>
-        jQuery(document).ready(function($){
+        jQuery(document).ready(function(){
         
-        $(".project-filter-menu li").on("click", function(){
+        jQuery(".project-filter-menu li").on("click", function(){
             
-            $(".project-filter-menu li").removeClass("active");
-            $(this).addClass("active");
+            jQuery(".project-filter-menu li").removeClass("active");
+            jQuery(this).addClass("active");
             
             var selector = $(this).attr("data-filter");
-            $(".project-filter-'.$project_daynamic_id.'").isotope({
+            jQuery(".project-filter-'.$project_daynamic_id.'").isotope({
                 filter: selector
             });
         });
     });
 
 
-    jQuery(window).load(function($){
-        $(".project-filter-'.$project_daynamic_id.'").isotope();
+    jQuery(window).load(function(){
+        jQuery(".project-filter-'.$project_daynamic_id.'").isotope();
     });
     </script>
     <div class="project-filter-wrapper">
