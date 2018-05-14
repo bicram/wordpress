@@ -19,7 +19,7 @@ function post_list_shortcode($atts, $content = null){
         $post_content = get_the_content();
         $list .= '
         <div class="single_post_item">
-            <h2>' .do_shortcode( get_the_title() ). '</h2>
+            <h2>' . get_the_title(). '</h2>
             '.wpautop( $post_content ).'
             <p>'.$custom_field.'</p>
         </div>
