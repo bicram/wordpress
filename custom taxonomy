@@ -1,0 +1,18 @@
+
+function project_custom_taxonomy() {
+    register_taxonomy(
+        'project_cat',  
+        'project',                  
+        array(
+            'hierarchical'          => true,
+            'label'                 => 'Project Category',  
+            'query_var'             => true,
+            'show_admin_column'     => true,
+            'rewrite'               => array(
+                'slug'              => 'project-category', 
+                'with_front'    => true 
+                )
+            )
+    );
+}
+add_action( 'init', 'project_custom_taxonomy');
