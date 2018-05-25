@@ -43,7 +43,7 @@ function kc_slides() {
 	                        'name' => 'slider_id',
 	                        'label' => esc_html__('Select a slide'),
 	                        'type' => 'select',
-							            'options' => get_slider_list(),
+				'options' => get_slider_list(),
 	                        'relation' => array(
 				    'parent'    => 'count',
 				    'show_when' => '1'
