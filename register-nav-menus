@@ -1,0 +1,36 @@
+**************************************
+STEP 1 : Menu Register
+**************************************
+register_nav_menus( array(
+		'topmenu' => esc_html__( 'Primary', 'alpha' ),
+	));
+  
+  
+  
+  
+  
+
+**************************************
+STEP 2 : Setup Menu Location
+**************************************
+
+ wp_nav_menu( array(
+    'theme_location'  => 'topmenu',
+    'menu_class'      => 'list-inline text-center',
+    'menu_id'         => 'mainmenu',
+) );
+
+
+
+
+
+**************************************
+STEP 3 : Add Class In Menu li
+**************************************
+
+
+function alpha_menu_class($classes, $item){
+	$classes[] = "list-inline-item";
+	return $classes;
+}
+add_filter( "nav_menu_css_class", "alpha_menu_class", 10, 2 );
