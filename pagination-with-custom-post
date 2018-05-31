@@ -1,0 +1,35 @@
+<?php
+$args = array( 'post_type' => 'job', 'posts_per_page' => 10 );
+$loop = new WP_Query( $args );
+while ( $loop->have_posts() ) : $loop->the_post();
+?>
+  <h2><?php the_title(); ?></h2>
+<?php  endwhile; ?>
+
+ <div class="job-pagination-wrapper">
+    <div class="found-jib-result">
+      <?php 
+        $page = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+        $ppp = get_query_var('posts_per_page');
+        $end = $ppp * $page;
+        $start = $end - $ppp + 1;
+        $total = $wp_query->found_posts;
+        $count_posts = wp_count_posts( 'job' )->publish;
+        echo "Results $start - $end of $count_posts";
+       ?>
+    </div>
+    <div class="job-pagination">
+      <?php 
+        $big = 999999999; // need an unlikely integer
+       echo paginate_links( array(
+          'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+          'format' => '?paged=%#%',
+          'current' => max( 1, get_query_var('paged') ),
+          "next_text" => '<span class="fa fa-angle-double-right"></span>',
+          "prev_text" => '<span class="fa fa-angle-double-left"></span>',
+          'total' => $loop->max_num_pages
+        ) );
+       ?>
+    </div>
+  </div>
+<?php  wp_reset_postdata(); ?>
