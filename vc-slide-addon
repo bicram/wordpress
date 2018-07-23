@@ -60,7 +60,7 @@ if(! defined('ABSPATH')){
                      array(
                         "type"          => "dropdown",
                         "heading"       => __( "Autoplay time", "gigabyte-shuvombm" ),
-                        "param_name"    => "autoplayTimeout",
+                        "param_name"    => "autoplay_timeout",
                         "std"           => __( "5000", "gigabyte-shuvombm" ),
                          "value"        => array(
                                             '1second'   => '1000',
