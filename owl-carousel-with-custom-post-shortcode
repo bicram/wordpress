@@ -9,7 +9,7 @@ function custom_post_carousel_shortcode($atts, $content = null){
         'slider_id' => '',
         'loop' => 'true',
         'autoplay' => 'true',
-        'autoplayTimeout' => 5000,
+        'autoplay_timeout' => 5000,
         'nav' => 'true',
         'dots' => 'true',
     ), $atts) );
@@ -31,7 +31,7 @@ function custom_post_carousel_shortcode($atts, $content = null){
                 jQuery("#custom-carousel-'.esc_attr($carousel_random_id).'").owlCarousel({
                      loop: '.$loop.',
                      autoplay: '.$autoplay.',
-                     autoplayTimeout: '.$autoplayTimeout.',
+                     autoplayTimeout: '.$autoplay_timeout.',
                      nav:'.$nav.',
                      dots: '.$dots.',
                      responsive:{
