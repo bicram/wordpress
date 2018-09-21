@@ -9,13 +9,13 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package CodeFactory
+ * @package themename
  */
 
 get_header(); 
 
-    if( get_post_meta($post->ID, 'codefactory_page_options', true)){
-        $page_meta = get_post_meta($post->ID, 'codefactory_page_options', true);
+    if( get_post_meta($post->ID, 'themename_page_options', true)){
+        $page_meta = get_post_meta($post->ID, 'themename_page_options', true);
     }else{
          $page_meta =  array();
     }
@@ -41,7 +41,7 @@ get_header();
 	              <?php endif; ?>  
 	           <div class="container">
 	               <div class="row">
-	                   <div class="col-md-12">
+	                   <div class="col-lg-12">
 	                        <h3><?php if(!empty($custom_title)){echo $custom_title;}else{the_title(); }?></h3>
 	                        <?php if(function_exists('bcn_display')) bcn_display(); ?>
 	                   </div>
@@ -50,10 +50,10 @@ get_header();
 	       </div>
     	<?php endif; ?>
 	
-		<div class="codefactory-internal-area">
+		<div class="themename-internal-area">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-lg-12">
 						<?php
 							while ( have_posts() ) : the_post();
 
