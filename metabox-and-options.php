@@ -63,7 +63,7 @@ function themename_theme_settings($options){
         'menu_slug' => 'themename-theme-option',
         'ajax_save' => true,
         'show_reset_all' => true,
-        'framework_title' => 'themename<small>by Shahadat Shuvo</small>',
+        'framework_title' => 'themename<small>by <a target="_blank" href="https://shuvombm.com">Shahadat Shuvo</a></small>',
     );
 
     return $settings;
