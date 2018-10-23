@@ -2,14 +2,14 @@
     die;
 }
 
-function sevenways_metabox_options($options){
+function themename_metabox_options($options){
     $options = array(); 
 
 
 // Page Metabox Options                    -
 // -----------------------------------------
     $options[] = array(
-        'id' => 'sevenways_page_options',
+        'id' => 'themename_page_options',
         'title' => esc_html__('Page Options', 'textdomain'),
         'post_type' => 'page',
         'context' => 'normal',
@@ -18,7 +18,7 @@ function sevenways_metabox_options($options){
 
 
             array(
-                'name' => 'sevenways_page_title_meta',
+                'name' => 'themename_page_title_meta',
 
                 'fields' => array(
 
@@ -44,7 +44,7 @@ function sevenways_metabox_options($options){
 
     return $options;
 }
-add_filter('cs_metabox_options', 'sevenways_metabox_options');
+add_filter('cs_metabox_options', 'themename_metabox_options');
 
 
 
@@ -54,25 +54,25 @@ add_filter('cs_metabox_options', 'sevenways_metabox_options');
 // Theme Options
 // -----------------------------------------
 
-function sevenways_theme_settings($options){
+function themename_theme_settings($options){
     $settings = array();
 
     $settings = array(
         'menu_title' => esc_html__('Theme Options', 'textdomain'),
         'menu_type' => 'menu', // menu, submenu, options, theme, etc.
-        'menu_slug' => 'sevenways-theme-option',
+        'menu_slug' => 'themename-theme-option',
         'ajax_save' => true,
         'show_reset_all' => true,
-        'framework_title' => 'sevenways<small> <span style="color: #ffffff;">by</span> <a style="text-decoration: none; color: #FFCD43;" target="_blank" href="https://shuvombm.com">Shahadat Shuvo</a></small>',
+        'framework_title' => 'themename<small> <span style="color: #ffffff;">by</span> <a style="text-decoration: none; color: #FFCD43;" target="_blank" href="https://shuvombm.com">Shahadat Shuvo</a></small>',
     );
 
     return $settings;
 
 }
-add_filter('cs_framework_settings', 'sevenways_theme_settings');
+add_filter('cs_framework_settings', 'themename_theme_settings');
 
 
-function sevenways_theme_options($options){
+function themename_theme_options($options){
 
     $options = array();
 
@@ -124,5 +124,5 @@ function sevenways_theme_options($options){
     return $options;
 
 }
-add_filter('cs_framework_options', 'sevenways_theme_options');
+add_filter('cs_framework_options', 'themename_theme_options');
   
