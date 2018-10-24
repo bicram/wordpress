@@ -58,7 +58,7 @@ function custom_post_carousel_shortcode($atts, $content = null){
         $post_content = get_the_content();
         $markup .= '
         <div class="single-carousel-item">
-            <h2>' .do_shortcode( get_the_title() ). '</h2>
+            <h2>' .get_the_title(). '</h2>
             '.wpautop( $post_content ).'
         </div>
         ';        
