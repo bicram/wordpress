@@ -15,7 +15,7 @@ function themename_gallery_shortcode($atts = array(), $content = null)
         <div class="wagtail-gallery">';
             foreach ($image_ids as $img) {
                 $attachment = wp_get_attachment_image_src( $img, 'full' ); 
-                $markup .= '<img src="'.$attachment[0].'"></a>';
+                $markup .= '<img src="'.esc_url($attachment[0]).'"></a>';
             }
     $markup .= '
         </div>';
