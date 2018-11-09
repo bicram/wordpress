@@ -20,7 +20,7 @@ if(! defined('ABSPATH')){
                         "type"          => "dropdown",
                         "heading"       => __( "Select slide", "text-domain" ),
                         "param_name"    => "slider_id",
-                         "value"        => gigabyte_get_slide_as_list(),
+                         "value"        => get_slide_as_list(),
                          "dependency"   => array(
                                                 "element" => "count",
                                                 "value" => array("1"),
