@@ -5,33 +5,33 @@ if(! defined('ABSPATH')){
 
    vc_map( 
        array(
-              "name"        => __( "Gigabyte slider", "gigabyte-shuvombm" ),
-              "base"        => "gigabyte_slide",
-              "category"    => __( "Gigabyte", "gigabyte-shuvombm"),
+              "name"        => __( "Slider", "text-domain" ),
+              "base"        => "slider",
+              "category"    => __( "Gigabyte", "text-domain"),
               "params"      => array(
                      array(
                         "type"          => "textfield",
-                        "heading"       => __( "Count", "gigabyte-shuvombm" ),
+                        "heading"       => __( "Count", "text-domain" ),
                         "param_name"    => "count",
-                        "value"         => __( "-1", "gigabyte-shuvombm" ),
-                        "description"   => __( "Type slides amount, if you want unlimited slides then type -1", "gigabyte-shuvombm" )
+                        "value"         => __( "-1", "text-domain" ),
+                        "description"   => __( "Type slides amount, if you want unlimited slides then type -1", "text-domain" )
                     ), 
                      array(
                         "type"          => "dropdown",
-                        "heading"       => __( "Select slide", "gigabyte-shuvombm" ),
+                        "heading"       => __( "Select slide", "text-domain" ),
                         "param_name"    => "slider_id",
                          "value"        => gigabyte_get_slide_as_list(),
                          "dependency"   => array(
                                                 "element" => "count",
                                                 "value" => array("1"),
                                             ),
-                        "description"   => __( "Select a slide", "gigabyte-shuvombm" )
+                        "description"   => __( "Select a slide", "text-domain" )
                     ),  
                      array(
                         "type"          => "dropdown",
-                        "heading"       => __( "Enable loop?", "gigabyte-shuvombm" ),
+                        "heading"       => __( "Enable loop?", "text-domain" ),
                         "param_name"    => "loop",
-                        "std"           => __( "true", "gigabyte-shuvombm" ),
+                        "std"           => __( "true", "text-domain" ),
                          "value"        => array(
                                             'Yes' => 'true',
                                             'No' => 'false',
@@ -40,13 +40,13 @@ if(! defined('ABSPATH')){
                                                 "element" => "count",
                                                 "value" => array("-1","2","3","4","5","6","7","8","9","10","11","12","13","14","15",),
                                             ),
-                        "description"   => __( "Select yes for enable loop or select No for disable", "gigabyte-shuvombm" )
+                        "description"   => __( "Select yes for enable loop or select No for disable", "text-domain" )
                     ), 
                      array(
                         "type"          => "dropdown",
-                        "heading"       => __( "Enable autoplay?", "gigabyte-shuvombm" ),
+                        "heading"       => __( "Enable autoplay?", "text-domain" ),
                         "param_name"    => "autoplay",
-                        "std"           => __( "true", "gigabyte-shuvombm" ),
+                        "std"           => __( "true", "text-domain" ),
                          "value"        => array(
                                             'Yes' => 'true',
                                             'No' => 'false',
@@ -55,13 +55,13 @@ if(! defined('ABSPATH')){
                                                 "element" => "count",
                                                 "value" => array("-1","2","3","4","5","6","7","8","9","10","11","12","13","14","15",),
                                             ),
-                        "description"   => __( "Select yes for enable autoplay or select No for disable", "gigabyte-shuvombm" )
+                        "description"   => __( "Select yes for enable autoplay or select No for disable", "text-domain" )
                     ), 
                      array(
                         "type"          => "dropdown",
-                        "heading"       => __( "Autoplay time", "gigabyte-shuvombm" ),
+                        "heading"       => __( "Autoplay time", "text-domain" ),
                         "param_name"    => "autoplay_timeout",
-                        "std"           => __( "5000", "gigabyte-shuvombm" ),
+                        "std"           => __( "5000", "text-domain" ),
                          "value"        => array(
                                             '1second'   => '1000',
                                             '2second'   => '2000',
@@ -84,13 +84,13 @@ if(! defined('ABSPATH')){
                                                 "element" => "count",
                                                 "value" => array("-1","2","3","4","5","6","7","8","9","10","11","12","13","14","15",),
                                             ),
-                        "description"   => __( "Select slide time", "gigabyte-shuvombm" )
+                        "description"   => __( "Select slide time", "text-domain" )
                     ), 
                      array(
                         "type"          => "dropdown",
-                        "heading"       => __( "Enable nav?", "gigabyte-shuvombm" ),
+                        "heading"       => __( "Enable nav?", "text-domain" ),
                         "param_name"    => "nav",
-                        "std"           => __( "true", "gigabyte-shuvombm" ),
+                        "std"           => __( "true", "text-domain" ),
                          "value"        => array(
                                             'Yes' => 'true',
                                             'No' => 'false',
@@ -99,13 +99,13 @@ if(! defined('ABSPATH')){
                                                 "element" => "count",
                                                 "value" => array("-1","2","3","4","5","6","7","8","9","10","11","12","13","14","15",),
                                             ),
-                        "description"   => __( "Select yes for enable nav or select No for disable", "gigabyte-shuvombm" )
+                        "description"   => __( "Select yes for enable nav or select No for disable", "text-domain" )
                     ), 
                      array(
                         "type"          => "dropdown",
-                        "heading"       => __( "Enable dots?", "gigabyte-shuvombm" ),
+                        "heading"       => __( "Enable dots?", "text-domain" ),
                         "param_name"    => "dots",
-                        "std"           => __( "true", "gigabyte-shuvombm" ),
+                        "std"           => __( "true", "text-domain" ),
                          "value"        => array(
                                             'Yes' => 'true',
                                             'No' => 'false',
@@ -114,7 +114,7 @@ if(! defined('ABSPATH')){
                                                 "element" => "count",
                                                 "value" => array("-1","2","3","4","5","6","7","8","9","10","11","12","13","14","15",),
                                             ),
-                        "description"   => __( "Select yes for enable dots or select No for disable", "gigabyte-shuvombm" )
+                        "description"   => __( "Select yes for enable dots or select No for disable", "text-domain" )
                     ),
                 )         
             ) 
