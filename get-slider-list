@@ -38,7 +38,7 @@ function get_slide_as_list(){
     
     $posts = get_posts($args);
     
-    $post_options = array (esc_html__('--Select slide--', 'bright-crazycafe')=>'');
+    $post_options = array (esc_html__('--Select slide--', 'text-domain')=>'');
     if($posts){
         foreach($posts as $post){
             $post_options[$post -> post_title] = $post -> ID;
