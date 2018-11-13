@@ -34,6 +34,7 @@ function custom_post_carousel_shortcode($atts, $content = null){
                      autoplayTimeout: '.$autoplay_timeout.',
                      nav:'.$nav.',
                      dots: '.$dots.',
+		     autoplayHoverPause: true,
                      responsive:{
                          0:{
                              items:1,
